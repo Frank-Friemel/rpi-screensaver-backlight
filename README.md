@@ -14,3 +14,23 @@ Since I could not find an option to do the trick ... I tried google and found ou
 `sudo sh -c 'echo 0 > /sys/class/backlight/rpi_backlight/bl_power'`
 
 Curiously, echo'ing a 1 to bl_power turns the display off. Echo'ing a 0 turns it on.
+
+First we add read/write access to the device-anchor to get rid of the need to use `sudo`
+
+`echo 'SUBSYSTEM=="backlight",RUN+="/bin/chmod 666 /sys/class/backlight/%k/brightness /sys/class/backlight/%k/bl_power"' | sudo tee -a /etc/udev/rules.d/backlight-permissions.rules`
+
+Then copy the file `screensaver-backlight.pl` of my repository to you folder `/usr/bin` and assign execute access
+
+`sudo chmod a+x /usr/bin/screensaver-backlight.pl`
+
+Finally add the execution of the perl script to the autostart file located in your home folder
+
+`cd ~/.config/lxsession/LXDE/`
+
+`nano autostart`
+
+Add this entry somewhere after start of `xscreensaver`
+
+`@screensaver-backlight.pl &`
+
+Reboot you pi afterwards. That's it.
