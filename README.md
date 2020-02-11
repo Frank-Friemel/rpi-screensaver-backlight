@@ -33,4 +33,4 @@ Add this entry somewhere after start of `xscreensaver`
 
 `@screensaver-backlight.pl &`
 
-Reboot you pi afterwards. That's it.
+Reboot your pi afterwards. That's it.
