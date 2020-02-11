@@ -15,7 +15,7 @@ Since I could not find an option to do the trick ... I tried google and found ou
 
 Curiously, echo'ing a 1 to bl_power turns the display off. Echo'ing a 0 turns it on.
 
-First we add read/write access to the device-anchor to get rid of the need to use `sudo`
+First we add everybody's read/write access to the device-anchor to get rid of the need to use `sudo`
 
 `echo 'SUBSYSTEM=="backlight",RUN+="/bin/chmod 666 /sys/class/backlight/%k/brightness /sys/class/backlight/%k/bl_power"' | sudo tee -a /etc/udev/rules.d/backlight-permissions.rules`
 
