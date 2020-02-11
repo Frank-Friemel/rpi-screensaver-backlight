@@ -23,7 +23,7 @@ Then copy the file `screensaver-backlight.pl` of my repository to you folder `/u
 
 `sudo chmod a+x /usr/bin/screensaver-backlight.pl`
 
-Finally add the execution of the perl script to the autostart file located in your home folder
+Finally add the execution of the perl script to the autostart file located beyond your home folder
 
 `cd ~/.config/lxsession/LXDE/`
 
