@@ -19,19 +19,19 @@ First we add everybody's read/write access to the device-anchor to get rid of th
 
 `echo 'SUBSYSTEM=="backlight",RUN+="/bin/chmod 666 /sys/class/backlight/%k/bl_power"' | sudo tee -a /etc/udev/rules.d/backlight-permissions.rules`
 
-Then copy the file `screensaver-backlight.pl` of my repository to your folder `/usr/bin` and assign execute access
+Then we copy the file `screensaver-backlight.pl` of this repository to our folder `/usr/bin` and assign execute access
 
 `sudo chmod a+x /usr/bin/screensaver-backlight.pl`
 
-Finally add the execution of the perl script to the _autostart_ config-file located beyond your home folder
+Finally we enable the auto-execution of the perl-script by modifying the _autostart_ config-file located beyond our home folder
 
 `cd ~/.config/lxsession/LXDE/`
 
 `nano autostart`
 
-Add a new entry `@screensaver-backlight.pl &` somewhere after the entry of `xscreensaver`
+We add a new entry `@screensaver-backlight.pl &` somewhere after the entry of `xscreensaver`
 
-Reboot your pi afterwards. That's it - now the backlight turns on/off together with screensaver's blank screen. If you want to apply above steps on your own raspi you should be aware to do this at your own risk.
+Reboot the pi afterwards. That's it - now the backlight turns on/off together with screensaver's blank screen. If you want to apply above steps on your own raspi you should be aware to do this at your own risk.
 
 ## License
 MIT License
