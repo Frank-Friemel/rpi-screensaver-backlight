@@ -29,7 +29,7 @@ Finally we enable the auto-execution of the perl-script by modifying the _autost
 
 `nano autostart`
 
-We add a new entry `@screensaver-backlight.pl &` somewhere after the entry of `xscreensaver`
+We add a new entry `@screensaver-backlight.pl &` somewhere behind the entry of `xscreensaver`
 
 Reboot the pi afterwards. That's it - now the backlight turns on/off together with screensaver's blank screen. If you want to apply above steps on your own raspi you should be aware to do this at your own risk.
 
