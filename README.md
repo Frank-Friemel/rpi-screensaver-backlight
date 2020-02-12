@@ -1,7 +1,7 @@
 # rpi-screensaver-backlight
 Control the backlight of your Raspberry pi display
 
-I bought myself the official pi display for my raspberry-pi. My intention was to use the combo as a [`homebridge`](https://github.com/nfarina/homebridge)/`homekit` server in my camping bus. Therefore the power consumption should be as low as possible.
+I bought myself the official pi display for my raspberry-pi. My intention was to use the combo as a [`homebridge`](https://github.com/nfarina/homebridge)/`homekit` server in my camping van. Therefore the power consumption should be as low as possible.
 
 ### The display
 
