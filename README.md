@@ -31,7 +31,7 @@ Finally add the execution of the perl script to the _autostart_ config-file loca
 
 Add a new entry `@screensaver-backlight.pl &` somewhere after the entry of `xscreensaver`
 
-Reboot your pi afterwards. That's it - now the backlight turns on/off together with screensaver's blank screen. If you want to apply above steps on your own pi you should be aware to do this on your own risk.
+Reboot your pi afterwards. That's it - now the backlight turns on/off together with screensaver's blank screen. If you want to apply above steps on your own raspi you should be aware to do this on your own risk.
 
 ## License
 MIT License
