@@ -19,7 +19,7 @@ First we add everybody's read/write access to the device-anchor to get rid of th
 
 `echo 'SUBSYSTEM=="backlight",RUN+="/bin/chmod 666 /sys/class/backlight/%k/bl_power"' | sudo tee -a /etc/udev/rules.d/backlight-permissions.rules`
 
-Then copy the file `screensaver-backlight.pl` of my repository to you folder `/usr/bin` and assign execute access
+Then copy the file `screensaver-backlight.pl` of my repository to your folder `/usr/bin` and assign execute access
 
 `sudo chmod a+x /usr/bin/screensaver-backlight.pl`
 
