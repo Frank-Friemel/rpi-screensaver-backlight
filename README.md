@@ -17,7 +17,7 @@ Curiously, echo'ing a 1 to _bl_power_ turns the display off. Echo'ing a 0 turns 
 
 First we add everybody's read/write access to the device-anchor to get rid of the need to use `sudo`
 
-`echo 'SUBSYSTEM=="backlight",RUN+="/bin/chmod 666 /sys/class/backlight/%k/brightness /sys/class/backlight/%k/bl_power"' | sudo tee -a /etc/udev/rules.d/backlight-permissions.rules`
+`echo 'SUBSYSTEM=="backlight",RUN+="/bin/chmod 666 /sys/class/backlight/%k/bl_power"' | sudo tee -a /etc/udev/rules.d/backlight-permissions.rules`
 
 Then copy the file `screensaver-backlight.pl` of my repository to you folder `/usr/bin` and assign execute access
 
